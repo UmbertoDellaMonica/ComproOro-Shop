@@ -1,9 +1,19 @@
 import { Component } from '@angular/core';
+import { ComproOroCallButtonComponent } from "../compro-oro-call-button/compro-oro-call-button.component";
+import { RouterOutlet, RouterLinkActive, RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-compro-oro-navbar',
+  selector: 'compro-oro-navbar',
   standalone: true,
-  imports: [],
+  imports: [
+
+    RouterOutlet,
+    RouterLinkActive,
+    RouterLink,
+
+
+    ComproOroCallButtonComponent
+  ],
   templateUrl: './compro-oro-navbar.component.html',
   styleUrl: './compro-oro-navbar.component.scss'
 })
