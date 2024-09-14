@@ -8,8 +8,15 @@ import { ComproOroNavbarComponent } from './shared/compro-oro-navbar/compro-oro-
 import { ComproOroFooterbarComponent } from './shared/compro-oro-footerbar/compro-oro-footerbar.component';
 
 import { ComproOroMapComponent } from './shared/compro-oro-map/compro-oro-map.component';
-import { ComproOroLogoComponent } from './shared/compro-oro-logo/compro-oro-logo.component';
-import { ComproOroCallButtonComponent } from './shared/compro-oro-call-button/compro-oro-call-button.component';
+import { ComproOroLogoComponent } from './shared/molecules/compro-oro-logo/compro-oro-logo.component';
+import { ComproOroCallButtonComponent } from './shared/molecules/compro-oro-call-button/compro-oro-call-button.component';
+
+
+
+import { ComproOroNumberComponent } from './shared/molecules/compro-oro-number/compro-oro-number.component';
+import { ComproOroEmailComponent } from './shared/molecules/compro-oro-email/compro-oro-email.component';
+import { ComproOroInfoComponent } from './components/contact/components/compro-oro-info/compro-oro-info.component';
+import { ComproOroFeedbackComponent } from './shared/molecules/compro-oro-feedback/compro-oro-feedback.component';
 
 
 
@@ -21,10 +28,15 @@ import { ComproOroCallButtonComponent } from './shared/compro-oro-call-button/co
 
     ComproOroNavbarComponent,
     ComproOroFooterbarComponent,
+    ComproOroInfoComponent,
+    
 
     ComproOroMapComponent,
+    ComproOroCallButtonComponent,
+    ComproOroNumberComponent,
     ComproOroLogoComponent,
-    ComproOroCallButtonComponent
+    ComproOroEmailComponent,
+    ComproOroFeedbackComponent
   ]
 })
 export class AppModule { }
