@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ComproOroCallButtonComponent } from "../compro-oro-call-button/compro-oro-call-button.component";
+import { ComproOroCallButtonComponent } from "../molecules/compro-oro-call-button/compro-oro-call-button.component";
 import { RouterOutlet, RouterLinkActive, RouterLink } from '@angular/router';
 
 @Component({
