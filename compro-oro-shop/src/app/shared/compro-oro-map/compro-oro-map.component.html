@@ -1,5 +1,10 @@
 <section class="text-gray-600 body-font relative">
-    <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="text-left mb-12">
+      <h1 class="text-4xl font-medium title-font text-gray-900 mb-4">Raggiungici</h1>
+      <p class="text-base text-left leading-relaxed xl:w-2/4 lg:w-3/4 mx-left text-gray-500s">Trova il nostro negozio con facilità utilizzando la mappa e i dettagli di contatto qui sotto. Siamo sempre pronti ad accoglierti.</p>
+    </div>
+    <div class="flex sm:flex-nowrap flex-wrap">
       <div class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
         <iframe 
         width="100%" 
@@ -13,8 +18,6 @@
         src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=Compro%20Oro%20Castel%20San%20Giorgio%2C%20Via%20Antonio%20Rescigno%2C%2048&ie=UTF8&t=&z=14&iwloc=B&output=embed" 
         style="filter: brightness(1) contrast(1) opacity(1);"></iframe>
         
-        
-        
         <div class="bg-white relative flex flex-wrap py-6 rounded shadow-md">
           <div class="lg:w-1/2 px-6">
             <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">Indirizzo</h2>
@@ -25,20 +28,16 @@
           </div>
           
           <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
-
             <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">Email</h2>
             <app-compro-oro-email></app-compro-oro-email>
             
             <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">Telefono</h2>
             <app-compro-oro-number></app-compro-oro-number>        
-          
           </div>
         </div>
-        
       </div>
       
       <app-compro-oro-feedback></app-compro-oro-feedback>
-
     </div>
-
-  </section>
+  </div>
+</section>

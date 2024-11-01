@@ -1,22 +1,23 @@
 <header class="text-gray-600 body-font shadow-md">
-  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center relative"> <!-- Aggiunto 'relative' -->
     <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 hover:text-yellow-600 transition-colors duration-300" href="/home">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-yellow-500 rounded-full shadow-lg transition-shadow duration-300 hover:shadow-xl" viewBox="0 0 24 24">
         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
       </svg>
       <span class="ml-3 text-xl font-bold">ComproOro</span>
     </a>
-    <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center relative">
+    <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
       <a class="mr-6 text-gray-700 hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500 hover:underline-offset-5 hover:font-bold focus:text-yellow-600 focus:border-yellow-600 focus:underline-offset-4 focus:font-bold transition-all duration-300" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
       <a class="mr-6 text-gray-700 hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500 hover:underline-offset-5 hover:font-bold focus:text-yellow-600 focus:border-yellow-600 focus:underline-offset-4 focus:font-bold transition-all duration-300" routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page">Chi siamo</a>
       <div class="relative group">
-        <a class="mr-6 text-gray-700 hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500 hover:underline-offset-5 hover:font-bold focus:text-yellow-600 focus:border-yellow-600 focus:underline-offset-4 focus:font-bold transition-all duration-600 cursor-pointer" routerLink="/services" routerLinkActive="active" ariaCurrentWhenActive="page">Servizi</a>
-        <div class="absolute left-0 w-40 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-600">
-          <a class="block px-4 py-2 text-gray-700 hover:bg-yellow-500 hover:text-white rounded-t-lg transition-colors duration-600" routerLink="/services#buy-gold" routerLinkActive="active">Acquisto Oro</a>
-          <a class="block px-4 py-2 text-gray-700 hover:bg-yellow-500 hover:text-white transition-colors duration-600" routerLink="/services#sell-gold" routerLinkActive="active">Vendita Oro</a>
-          <a class="block px-4 py-2 text-gray-700 hover:bg-yellow-500 hover:text-white transition-colors duration-600" routerLink="/services#jewelry-repair" routerLinkActive="active">Riparazione Gioielli</a>
-          <a class="block px-4 py-2 text-gray-700 hover:bg-yellow-500 hover:text-white transition-colors duration-600" routerLink="/services#appraisals" routerLinkActive="active">Valutazioni</a>
-          <a class="block px-4 py-2 text-gray-700 hover:bg-yellow-500 hover:text-white rounded-b-lg transition-colors duration-600" routerLink="/services#consultation" routerLinkActive="active">Consulenze</a>
+        <a class="mr-6 text-gray-700 hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500 hover:underline-offset-5 hover:font-bold focus:text-yellow-600 focus:border-yellow-600 focus:underline-offset-4 focus:font-bold transition-all duration-600 cursor-pointer" routerLink="/services" routerLinkActive="active">Servizi</a>
+        <div class="absolute left-0 w-40 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-600 z-10"> <!-- Aggiunto 'z-10' -->
+          <a class="block px-4 py-2 text-gray-700 hover:bg-yellow-500 hover:text-white rounded-t-lg transition-colors duration-600" [routerLink]="['/services']" [fragment]="'free-evaluate'">Valutazione Gratuita</a>
+          <a class="block px-4 py-2 text-gray-700 hover:bg-yellow-500 hover:text-white transition-colors duration-600" [routerLink]="['/services']" [fragment]="'sell-gold-jewels'">Vendita oro e gioielli</a>
+          <a class="block px-4 py-2 text-gray-700 hover:bg-yellow-500 hover:text-white transition-colors duration-600" [routerLink]="['/services']" [fragment]="'jewelry-repair'">Riparazione Gioielli</a>
+          <a class="block px-4 py-2 text-gray-700 hover:bg-yellow-500 hover:text-white transition-colors duration-600" [routerLink]="['/services']" [fragment]="'sell-gold-coin'">Valutazione monete d'oro</a>
+          <a class="block px-4 py-2 text-gray-700 hover:bg-yellow-500 hover:text-white transition-colors duration-600" [routerLink]="['/services']" [fragment]="'evaluates-watch'">Valutazione Orologi</a>
+          <a class="block px-4 py-2 text-gray-700 hover:bg-yellow-500 hover:text-white rounded-b-lg transition-colors duration-600" [routerLink]="['/services']" [fragment]="'services-for-industry'">Servizi per Aziende</a>
         </div>
       </div>
       <a class="mr-6 text-gray-700 hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500 hover:underline-offset-5 hover:font-bold focus:text-yellow-600 focus:border-yellow-600 focus:underline-offset-4 focus:font-bold transition-all duration-300" routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contatti</a>
