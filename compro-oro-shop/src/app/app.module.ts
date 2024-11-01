@@ -18,6 +18,7 @@ import { ComproOroEmailComponent } from './shared/molecules/compro-oro-email/com
 import { ComproOroInfoComponent } from './components/contact/components/compro-oro-info/compro-oro-info.component';
 import { ComproOroFeedbackComponent } from './shared/molecules/compro-oro-feedback/compro-oro-feedback.component';
 import { ComproOroSeparatorComponent } from './shared/molecules/compro-oro-separator/compro-oro-separator.component';
+import { AppRoutingModule } from './app.routes';
 
 
 
@@ -38,7 +39,9 @@ import { ComproOroSeparatorComponent } from './shared/molecules/compro-oro-separ
     ComproOroLogoComponent,
     ComproOroEmailComponent,
     ComproOroFeedbackComponent,
-    ComproOroSeparatorComponent
+    ComproOroSeparatorComponent,
+
+    AppRoutingModule,  // Aggiungi qui l'importazione del modulo di routing
   ]
 })
 export class AppModule { }

@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ComproOroSeparatorComponent } from "../../shared/molecules/compro-oro-separator/compro-oro-separator.component";
+import { ViewportScroller } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-services',
@@ -8,6 +11,17 @@ import { ComproOroSeparatorComponent } from "../../shared/molecules/compro-oro-s
   templateUrl: './services.component.html',
   styleUrl: './services.component.scss'
 })
-export class ServicesComponent {
+export class ServicesComponent implements OnInit{
 
+
+  constructor(private route: ActivatedRoute, private viewportScroller: ViewportScroller) { }
+
+  ngOnInit(): void {
+    this.route.fragment.subscribe((fragment: string | null) => {
+      if (fragment) {
+        this.viewportScroller.scrollToAnchor(fragment);
+      }
+    });
+  }
 }
+
