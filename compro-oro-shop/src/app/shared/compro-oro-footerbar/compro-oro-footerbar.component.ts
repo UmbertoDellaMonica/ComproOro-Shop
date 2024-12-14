@@ -9,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class ComproOroFooterbarComponent {
 
+  // Current Year - get from the typescript method
+  currentYear: number = new Date().getFullYear();
+
+
 }

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CarouselModule } from 'primeng/carousel'; 
 
 
 
@@ -19,6 +20,7 @@ import { ComproOroInfoComponent } from './components/contact/components/compro-o
 import { ComproOroFeedbackComponent } from './shared/molecules/compro-oro-feedback/compro-oro-feedback.component';
 import { ComproOroSeparatorComponent } from './shared/molecules/compro-oro-separator/compro-oro-separator.component';
 import { AppRoutingModule } from './app.routes';
+import { TestimonialsComponent } from './components/home/components/testimonials/testimonials.component';
 
 
 
@@ -27,6 +29,7 @@ import { AppRoutingModule } from './app.routes';
   imports: [
     FontAwesomeModule,
     CommonModule,
+    CarouselModule,
 
     ComproOroNavbarComponent,
     ComproOroFooterbarComponent,
@@ -40,6 +43,8 @@ import { AppRoutingModule } from './app.routes';
     ComproOroEmailComponent,
     ComproOroFeedbackComponent,
     ComproOroSeparatorComponent,
+
+    TestimonialsComponent,
 
     AppRoutingModule,  // Aggiungi qui l'importazione del modulo di routing
   ]
