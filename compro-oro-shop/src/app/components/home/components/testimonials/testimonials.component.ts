@@ -1,19 +1,18 @@
 import { CommonModule } from '@angular/common';
-import { Component, ViewChild } from '@angular/core';
-import { Carousel } from 'primeng/carousel';
+import { Component } from '@angular/core';
+import { CarouselModule } from 'primeng/carousel';
 
 
 @Component({
   selector: 'app-testimonials',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, CarouselModule],
   templateUrl: './testimonials.component.html',
   styleUrls: ['./testimonials.component.scss']
 })
 export class TestimonialsComponent {
-  @ViewChild('carousel') carousel!: Carousel;
 
-  
+
   testimonials = [
     {
       name: 'Mario Rossi',
@@ -40,14 +39,5 @@ export class TestimonialsComponent {
       icon: 'F',
     }
   ];
-
-  next() {
-    this.carousel.next(); // Metodo del carosello per andare al prossimo elemento
-  }
-
-  // Funzione per tornare all'elemento precedente
-  prev() {
-    this.carousel.prev(); // Metodo del carosello per tornare all'elemento precedente
-  }
 }
 

@@ -1,49 +1,39 @@
-<div id="GFG" class="flex justify-center items-center w-full h-screen">
-    <div class="text-center">
-      <h1 class="text-green-500">GeeksforGeeks</h1>
-      <h2 class="text-xl">Angular PrimeNG Carousel Circular</h2>
-      <div class="w-1/2 mx-auto mt-4 relative">
-        <!-- Carosello -->
-        <p-carousel #carousel [value]="testimonials" [circular]="true">
-          <ng-template let-testimonial pTemplate="item">
-            <div class="product-item w-80">
-              <div class="product-item-content bg-white p-6 rounded-lg shadow-md">
-                <!-- Icona per la persona -->
-                <div class="flex justify-center mb-4">
-                  <div class="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center">
-                    <span class="text-xl font-bold text-white">{{ testimonial.icon }}</span>
-                  </div>
+<section id="testimonials" class="flex justify-center items-center w-full h-screen bg-gray-100 py-12 testimonials-section">
+  <div class="text-center w-full">
+    <h2 class="text-yellow-500 text-4xl font-bold mb-8">Testimonials</h2>
+    <div class="w-3/4 mx-auto mt-4 relative">
+      <!-- Carosello -->
+      <p-carousel 
+        [value]="testimonials" 
+        [circular]="true" 
+        [numScroll]="1"
+        [numVisible]="1"
+        [showNavigators]="true"
+        [showIndicators]="true">
+        <ng-template let-testimonial pTemplate="item">
+          <div class="product-item w-full flex justify-center">
+            <div class="product-item-content bg-white p-6 rounded-lg shadow-lg">
+              <!-- Icona per la persona -->
+              <div class="flex justify-center mb-4">
+                <div class="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center shadow-md">
+                  <span class="text-xl font-bold text-white">{{ testimonial.icon }}</span>
                 </div>
-                <!-- Descrizione del servizio -->
-                <p class="leading-relaxed mb-4">{{ testimonial.description }}</p>
-                <!-- Rating con stelle -->
-                <div class="flex justify-center mb-4">
-                  <ng-container *ngFor="let star of [].constructor(testimonial.rating)">
-                    <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.572 4.856a1 1 0 00.95.691h5.104c.97 0 1.371 1.24.588 1.81l-4.122 2.993a1 1 0 00-.364 1.118l1.572 4.856c.3.921-.755 1.688-1.54 1.118l-4.122-2.993a1 1 0 00-1.176 0l-4.122 2.993c-.785.57-1.84-.197-1.54-1.118l1.572-4.856a1 1 0 00-.364-1.118L2.585 9.284c-.783-.57-.382-1.81.588-1.81h5.104a1 1 0 00.95-.691l1.572-4.856z"></path>
-                    </svg>
-                  </ng-container>
-                </div>
-                <!-- Nome della persona -->
-                <h3 class="text-lg font-semibold text-gray-900">{{ testimonial.name }}</h3>
               </div>
+              <!-- Descrizione del servizio -->
+              <p class="leading-relaxed mb-4 text-gray-700">{{ testimonial.description }}</p>
+              <!-- Rating con stelle -->
+              <div class="flex justify-center mb-4">
+                <svg class="w-5 h-5 text-yellow-500 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.572 4.856a1 1 0 00.95.691h5.104c.97 0 1.371 1.24.588 1.81l-4.122 2.993a1 1 0 00-.364 1.118l1.572 4.856c.3.921-.755 1.688-1.54 1.118l-4.122-2.993a1 1 0 00-1.176 0l-4.122 2.993c-.785.57-1.84-.197-1.54-1.118l1.572-4.856a1 1 0 00-.364-1.118L2.585 9.284c-.783-.57-.382-1.81.588-1.81h5.104a1 1 0 00.95-.691l1.572-4.856z"></path>
+                </svg>
+                <span>{{ testimonial.rating }}/5</span>
+              </div>
+              <!-- Nome della persona -->
+              <h3 class="text-lg font-semibold text-gray-900">{{ testimonial.name }}</h3>
             </div>
-          </ng-template>
-        </p-carousel>
-  
-        <!-- Bottoni Personalizzati -->
-        <div class="absolute top-1/2 left-0 transform -translate-y-1/2 p-2">
-          <button class="bg-gray-800 text-white p-2 rounded-full" (click)="carousel.prev()">
-            &#8592; <!-- Freccia sinistra -->
-          </button>
-        </div>
-        <div class="absolute top-1/2 right-0 transform -translate-y-1/2 p-2">
-          <button class="bg-gray-800 text-white p-2 rounded-full" (click)="carousel.next()">
-            &#8594; <!-- Freccia destra -->
-          </button>
-        </div>
-      </div>
+          </div>
+        </ng-template>
+      </p-carousel>
     </div>
   </div>
-  
-  
+</section>
