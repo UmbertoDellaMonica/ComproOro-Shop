@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CarouselModule } from 'primeng/carousel'; 
+import { FormsModule } from '@angular/forms'; // Importa FormsModule qui
 
 
 
@@ -17,7 +18,6 @@ import { ComproOroCallButtonComponent } from './shared/molecules/compro-oro-call
 import { ComproOroNumberComponent } from './shared/molecules/compro-oro-number/compro-oro-number.component';
 import { ComproOroEmailComponent } from './shared/molecules/compro-oro-email/compro-oro-email.component';
 import { ComproOroInfoComponent } from './components/contact/components/compro-oro-info/compro-oro-info.component';
-import { ComproOroFeedbackComponent } from './shared/molecules/compro-oro-feedback/compro-oro-feedback.component';
 import { ComproOroSeparatorComponent } from './shared/molecules/compro-oro-separator/compro-oro-separator.component';
 import { AppRoutingModule } from './app.routes';
 import { TestimonialsComponent } from './components/home/components/testimonials/testimonials.component';
@@ -30,6 +30,7 @@ import { TestimonialsComponent } from './components/home/components/testimonials
     FontAwesomeModule,
     CommonModule,
     CarouselModule,
+    FormsModule,
 
     ComproOroNavbarComponent,
     ComproOroFooterbarComponent,
@@ -41,7 +42,6 @@ import { TestimonialsComponent } from './components/home/components/testimonials
     ComproOroNumberComponent,
     ComproOroLogoComponent,
     ComproOroEmailComponent,
-    ComproOroFeedbackComponent,
     ComproOroSeparatorComponent,
 
     TestimonialsComponent,
