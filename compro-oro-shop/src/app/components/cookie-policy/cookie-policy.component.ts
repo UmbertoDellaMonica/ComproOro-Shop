@@ -9,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class CookiePolicyComponent {
 
+  openCookieSettings() {
+    // Implementa la logica per aprire le impostazioni dei cookie
+  }
 }
