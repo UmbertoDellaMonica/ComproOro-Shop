@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { ComproOroSeparatorComponent } from "../../shared/molecules/compro-oro-separator/compro-oro-separator.component";
 import { ViewportScroller } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { ComproOroCallButtonComponent } from "../../shared/molecules/compro-oro-call-button/compro-oro-call-button.component";
 
 
 @Component({
   selector: 'app-services',
   standalone: true,
-  imports: [ComproOroSeparatorComponent],
+  imports: [ComproOroSeparatorComponent, ComproOroCallButtonComponent],
   templateUrl: './services.component.html',
   styleUrl: './services.component.scss'
 })
