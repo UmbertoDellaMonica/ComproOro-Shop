@@ -1,3 +1,5 @@
+
+<!-- Navbar per Desktop -->
 <header  *ngIf="isDesktop" class="text-gray-600 body-font shadow-md">
   <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center relative"> <!-- Aggiunto 'relative' -->
     <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 hover:text-yellow-600 transition-colors duration-300" href="/home">
@@ -38,13 +40,37 @@
       <span class="ml-2 text-lg font-bold">ComproOro</span>
     </a>
 
-    <!-- Menu a Hamburger -->
-    <div class="lg:hidden flex items-center" (click)="toggleMenu()">
-      <button class="text-gray-600 hover:text-yellow-600 focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-          <path d="M3 6h18M3 12h18M3 18h18"></path>
-        </svg>
-      </button>
+    <!-- Menu a Hamburger e Social Media Icons -->
+    <div class="flex items-center space-x-6">
+      <!-- Social Media Icons -->
+      <div class="flex space-x-3 items-center">
+        <a href="https://www.facebook.com" class="text-gray-500 hover:text-yellow-500 transition-colors duration-300" target="_blank" rel="noopener noreferrer" title="Facebook Link">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com" class="text-gray-500 hover:text-yellow-500 transition-colors duration-300" target="_blank" rel="noopener noreferrer" title="Instagram Link">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com" class="text-gray-500 hover:text-yellow-500 transition-colors duration-300" target="_blank" rel="noopener noreferrer" title="Linkedin Link">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Menu a Hamburger -->
+      <div class="lg:hidden flex items-center" (click)="toggleMenu()">
+        <button class="text-gray-600 hover:text-yellow-600 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path d="M3 6h18M3 12h18M3 18h18"></path>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 
@@ -78,13 +104,6 @@
     </div>
   </div>
 </header>
-
-
-
-
-
-
-
 
 
 

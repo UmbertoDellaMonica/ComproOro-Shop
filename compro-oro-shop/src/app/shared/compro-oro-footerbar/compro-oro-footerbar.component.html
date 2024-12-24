@@ -1,4 +1,6 @@
-<footer class="text-gray-600 body-font shadow-custom">
+
+<!-- Footerbar per Desktop -->
+<footer *ngIf="isDesktop" class="text-gray-600 body-font shadow-custom">
 
   <div class="container px-5 py-8 mx-auto flex items-center flex-col sm:flex-row">
     
@@ -18,10 +20,6 @@
         <img src="oam-image.svg" alt="OAM" class="w-15 h-8">
       </a>
     </span>
-    
-    
-    
-    
 
     <span class="flex flex-wrap justify-center space-x-4 mt-4 sm:mt-0 sm:ml-auto ">
       <!-- Facebook Icon -->
@@ -45,15 +43,132 @@
         </svg>
       </a>
     </span>
-    
-
     <span class="flex flex-wrap justify-center space-x-4 mt-4 sm:mt-0 sm:ml-auto">
       <p class="text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-gray-200 sm:py-2 sm:mt-0 mt-4">
         © {{currentYear}} ComproOro —
         <a href="/privacy-policy" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">Privacy Policy</a> | 
-        <a href="/cookie-policy" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">Cookie Policy</a>
+        <a href="/cookie-policy" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">Cookie Policy</a> |
+        P.IVA 12345678901
       </p>
     </span>
     
+  </div>
+</footer>
+
+
+
+
+<!-- Footerbar per Tablet -->
+<footer *ngIf="isTablet" class="text-gray-600 body-font shadow-custom">
+  <div class="container px-5 py-3 mx-auto flex flex-col items-center">
+    <!-- Logo and Site Name -->
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 hover:text-yellow-600 transition-colors duration-300" href="/home">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-yellow-500 rounded-full shadow-lg transition-shadow duration-300 hover:shadow-xl" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-xl font-bold">ComproOro</span>
+    </a>
+
+    <!-- Trust Icons and Social Media Icons -->
+    <div class="flex justify-between items-center w-full">
+      <!-- Banca d'Italia -->
+      <a href="https://infostat.bancaditalia.it/GIAVAInquiry-public/oro.html" class="text-gray-500 hover:text-yellow-500 transition-colors duration-300" target="_blank" rel="noopener noreferrer">
+        <img src="bi.svg" alt="Banca d'Italia" class="w-10 h-10">
+      </a>
+      <!-- Social Media Icons -->
+      <div class="flex space-x-3 items-center">
+        <a href="https://www.facebook.com" class="text-gray-500 hover:text-yellow-500 transition-colors duration-300" target="_blank" rel="noopener noreferrer" title="Facebook Link">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com" class="text-gray-500 hover:text-yellow-500 transition-colors duration-300" target="_blank" rel="noopener noreferrer" title="Instagram Link">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com" class="text-gray-500 hover:text-yellow-500 transition-colors duration-300" target="_blank" rel="noopener noreferrer" title="Linkedin Link">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </div>
+      <!-- OAM -->
+      <a href="https://www.organismo-am.it/" class="text-gray-500 hover:text-yellow-500 transition-colors duration-300" target="_blank" rel="noopener noreferrer">
+        <img src="oam-image.svg" alt="OAM" class="w-10 h-10">
+      </a>
+    </div>
+
+    <!-- Privacy and Cookie Policy -->
+    <div class="mt-4 text-center">
+      <p class="text-sm text-gray-500">
+        © {{currentYear}} ComproOro —
+        <a href="/privacy-policy" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">Privacy Policy</a> | 
+        <a href="/cookie-policy" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">Cookie Policy</a> |
+        P.IVA 12345678901
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+<!-- Footerbar per Mobile -->
+<footer *ngIf="isMobile" class="text-gray-600 body-font shadow-custom">
+  <div class="container px-5 py-3 mx-auto flex flex-col items-center">
+    <!-- Logo and Site Name -->
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 hover:text-yellow-600 transition-colors duration-300" href="/home">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-yellow-500 rounded-full shadow-lg transition-shadow duration-300 hover:shadow-xl" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-xl font-bold">ComproOro</span>
+    </a>
+
+    <!-- Trust Icons and Social Media Icons -->
+    <div class="flex justify-between items-center w-full">
+      <!-- Banca d'Italia -->
+      <a href="https://infostat.bancaditalia.it/GIAVAInquiry-public/oro.html" class="text-gray-500 hover:text-yellow-500 transition-colors duration-300" target="_blank" rel="noopener noreferrer">
+        <img src="bi.svg" alt="Banca d'Italia" class="w-10 h-10">
+      </a>
+      <!-- Social Media Icons -->
+      <div class="flex space-x-3 items-center">
+        <a href="https://www.facebook.com" class="text-gray-500 hover:text-yellow-500 transition-colors duration-300" target="_blank" rel="noopener noreferrer" title="Facebook Link">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com" class="text-gray-500 hover:text-yellow-500 transition-colors duration-300" target="_blank" rel="noopener noreferrer" title="Instagram Link">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com" class="text-gray-500 hover:text-yellow-500 transition-colors duration-300" target="_blank" rel="noopener noreferrer" title="Linkedin Link">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </div>
+      <!-- OAM -->
+      <a href="https://www.organismo-am.it/" class="text-gray-500 hover:text-yellow-500 transition-colors duration-300" target="_blank" rel="noopener noreferrer">
+        <img src="oam-image.svg" alt="OAM" class="w-10 h-10">
+      </a>
+    </div>
+
+    <!-- Privacy and Cookie Policy -->
+    <div class="mt-4 text-center">
+      <p class="text-sm text-gray-500">
+        © {{currentYear}} ComproOro —
+        <a href="/privacy-policy" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">Privacy Policy</a> | 
+        <a href="/cookie-policy" class="text-gray-600 ml-1" rel="noopener noreferrer" target="_blank">Cookie Policy</a> |
+        P.IVA 12345678901
+      </p>
+    </div>
   </div>
 </footer>
