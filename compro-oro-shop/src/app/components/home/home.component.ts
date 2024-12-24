@@ -7,17 +7,17 @@ import { TestimonialsComponent } from "./components/testimonials/testimonials.co
 
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  imports: [
-    ComproOroSeparatorComponent,
-    CarouselModule,
-    CommonModule,
-    RouterModule,
-    TestimonialsComponent
-],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+    selector: 'app-home',
+    standalone: true,
+    imports: [
+        ComproOroSeparatorComponent,
+        CarouselModule,
+        CommonModule,
+        RouterModule,
+        TestimonialsComponent
+    ],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss'
 })
 export class HomeComponent {
   // Servizi per il Cliente

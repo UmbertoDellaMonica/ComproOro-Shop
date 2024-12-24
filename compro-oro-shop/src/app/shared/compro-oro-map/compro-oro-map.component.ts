@@ -5,17 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-compro-oro-map',
-  standalone: true,
-  imports: [
-    ComproOroNumberComponent,
-    ComproOroEmailComponent,
-    CommonModule,
-    FormsModule
-    
-],
-  templateUrl: './compro-oro-map.component.html',
-  styleUrl: './compro-oro-map.component.scss'
+    selector: 'app-compro-oro-map',
+    standalone: true,
+    imports: [FormsModule,ComproOroEmailComponent,ComproOroNumberComponent,CommonModule],
+    templateUrl: './compro-oro-map.component.html',
+    styleUrl: './compro-oro-map.component.scss'
 })
 export class ComproOroMapComponent {
 

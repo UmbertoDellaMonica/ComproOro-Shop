@@ -6,11 +6,11 @@ import { ComproOroCallButtonComponent } from "../../shared/molecules/compro-oro-
 
 
 @Component({
-  selector: 'app-services',
-  standalone: true,
-  imports: [ComproOroSeparatorComponent, ComproOroCallButtonComponent],
-  templateUrl: './services.component.html',
-  styleUrl: './services.component.scss'
+    selector: 'app-services',
+    standalone: true,
+    imports: [ComproOroSeparatorComponent, ComproOroCallButtonComponent],
+    templateUrl: './services.component.html',
+    styleUrl: './services.component.scss'
 })
 export class ServicesComponent implements OnInit{
 
