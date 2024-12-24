@@ -4,11 +4,11 @@ import { CarouselModule } from 'primeng/carousel';
 
 
 @Component({
-  selector: 'app-testimonials',
-  standalone: true,
-  imports: [CommonModule, CarouselModule],
-  templateUrl: './testimonials.component.html',
-  styleUrls: ['./testimonials.component.scss']
+    selector: 'app-testimonials',
+    standalone:true,
+    imports: [CommonModule, CarouselModule],
+    templateUrl: './testimonials.component.html',
+    styleUrls: ['./testimonials.component.scss']
 })
 export class TestimonialsComponent {
 

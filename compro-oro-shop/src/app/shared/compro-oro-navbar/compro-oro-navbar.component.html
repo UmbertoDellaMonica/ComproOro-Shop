@@ -1,4 +1,6 @@
-<header class="text-gray-600 body-font shadow-md">
+
+<!-- Navbar per Desktop -->
+<header  *ngIf="isDesktop" class="text-gray-600 body-font shadow-md">
   <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center relative"> <!-- Aggiunto 'relative' -->
     <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0 hover:text-yellow-600 transition-colors duration-300" href="/home">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-yellow-500 rounded-full shadow-lg transition-shadow duration-300 hover:shadow-xl" viewBox="0 0 24 24">
@@ -23,5 +25,126 @@
       <a class="mr-6 text-gray-700 hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500 hover:underline-offset-5 hover:font-bold focus:text-yellow-600 focus:border-yellow-600 focus:underline-offset-4 focus:font-bold transition-all duration-300" routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contatti</a>
     </nav>
     <app-compro-oro-button></app-compro-oro-button>
+  </div>
+</header>
+
+
+<!-- Navbar per Mobile -->
+<header *ngIf="isMobile" class="text-gray-600 body-font shadow-md">
+  <div class="container mx-auto flex flex-wrap p-5 items-center justify-between relative">
+    <!-- Logo e Titolo -->
+    <a class="flex title-font font-medium items-center text-gray-900" href="/home">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-8 h-8 text-white p-2 bg-yellow-500 rounded-full shadow-lg transition-shadow duration-300 hover:shadow-xl" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-2 text-lg font-bold">ComproOro</span>
+    </a>
+
+    <!-- Menu a Hamburger e Social Media Icons -->
+    <div class="flex items-center space-x-6">
+      <!-- Social Media Icons -->
+      <div class="flex space-x-3 items-center">
+        <a href="https://www.facebook.com" class="text-gray-500 hover:text-yellow-500 transition-colors duration-300" target="_blank" rel="noopener noreferrer" title="Facebook Link">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a href="https://www.instagram.com" class="text-gray-500 hover:text-yellow-500 transition-colors duration-300" target="_blank" rel="noopener noreferrer" title="Instagram Link">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com" class="text-gray-500 hover:text-yellow-500 transition-colors duration-300" target="_blank" rel="noopener noreferrer" title="Linkedin Link">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Menu a Hamburger -->
+      <div class="lg:hidden flex items-center" (click)="toggleMenu()">
+        <button class="text-gray-600 hover:text-yellow-600 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path d="M3 6h18M3 12h18M3 18h18"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menu a discesa per mobile -->
+  <div *ngIf="menuOpen" class="lg:hidden absolute top-16 left-0 w-full bg-white border-t border-gray-200 shadow-lg z-20">
+    <div class="flex flex-col p-4 bg-gray-50 rounded-lg">
+      <a class="py-2 text-gray-700 hover:bg-yellow-500 hover:text-white transition-colors duration-300 rounded-md px-3" [routerLink]="['/home']" (click)="closeMenu()">Home</a>
+      <a class="py-2 text-gray-700 hover:bg-yellow-500 hover:text-white transition-colors duration-300 rounded-md px-3" [routerLink]="['/about-us']" (click)="closeMenu()">Chi siamo</a>
+
+      <!-- Servizi con sotto-menu -->
+      <div class="relative">
+        <button class="py-2 text-gray-700 hover:bg-yellow-500 hover:text-white w-full text-left flex justify-between items-center rounded-md px-3" (click)="toggleSubMenu()">
+          Servizi
+          <svg xmlns="http://www.w3.org/2000/svg" class="inline-block w-4 h-4 ml-2" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
+            <path d="M6 9l6 6 6-6"></path>
+          </svg>
+        </button>
+
+        <!-- Sotto-menu -->
+        <div *ngIf="subMenuOpen" class="flex flex-col pl-4 pt-2 bg-gray-100 rounded-lg shadow-md">
+          <a class="py-2 text-gray-700 hover:bg-yellow-500 hover:text-white transition-colors duration-300 rounded-md px-3" [routerLink]="['/services']" [fragment]="'free-evaluate'" (click)="closeMenu()">Valutazione Gratuita</a>
+          <a class="py-2 text-gray-700 hover:bg-yellow-500 hover:text-white transition-colors duration-300 rounded-md px-3" [routerLink]="['/services']" [fragment]="'sell-gold-jewels'" (click)="closeMenu()">Vendita oro e gioielli</a>
+          <a class="py-2 text-gray-700 hover:bg-yellow-500 hover:text-white transition-colors duration-300 rounded-md px-3" [routerLink]="['/services']" [fragment]="'jewelry-repair'" (click)="closeMenu()">Riparazione Gioielli</a>
+          <a class="py-2 text-gray-700 hover:bg-yellow-500 hover:text-white transition-colors duration-300 rounded-md px-3" [routerLink]="['/services']" [fragment]="'sell-gold-coin'" (click)="closeMenu()">Valutazione monete d'oro</a>
+          <a class="py-2 text-gray-700 hover:bg-yellow-500 hover:text-white transition-colors duration-300 rounded-md px-3" [routerLink]="['/services']" [fragment]="'evaluates-watch'" (click)="closeMenu()">Valutazione Orologi</a>
+          <a class="py-2 text-gray-700 hover:bg-yellow-500 hover:text-white transition-colors duration-300 rounded-md px-3" [routerLink]="['/services']" [fragment]="'services-for-industry'" (click)="closeMenu()">Servizi per Aziende</a>
+        </div>
+      </div>
+
+      <a class="py-2 text-gray-700 hover:bg-yellow-500 hover:text-white transition-colors duration-300 rounded-md px-3" [routerLink]="['/contact']" (click)="closeMenu()">Contatti</a>
+    </div>
+  </div>
+</header>
+
+
+
+
+<!-- Navbar per Tablet -->
+<header *ngIf="isTablet" class="text-gray-600 body-font shadow-md">
+  <div class="container mx-auto flex flex-wrap p-5 items-center justify-between relative">
+    <!-- Logo -->
+    <a class="flex title-font font-medium items-center text-gray-900" href="/home">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-8 h-8 text-white p-2 bg-yellow-500 rounded-full shadow-lg transition-shadow duration-300 hover:shadow-xl" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-lg font-bold">ComproOro</span>
+    </a>
+
+    <!-- Navigazione principale e menu hamburger -->
+    <nav class="flex ml-auto space-x-6 items-center">
+      <a class="text-gray-700 hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500 hover:underline-offset-5 hover:font-bold focus:text-yellow-600 focus:border-yellow-600 focus:underline-offset-4 focus:font-bold transition-all duration-300" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
+      <a class="text-gray-700 hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500 hover:underline-offset-5 hover:font-bold focus:text-yellow-600 focus:border-yellow-600 focus:underline-offset-4 focus:font-bold transition-all duration-300" routerLink="/about-us" routerLinkActive="active" ariaCurrentWhenActive="page">Chi siamo</a>
+      <a class="text-gray-700 hover:text-yellow-500 border-b-2 border-transparent hover:border-yellow-500 hover:underline-offset-5 hover:font-bold focus:text-yellow-600 focus:border-yellow-600 focus:underline-offset-4 focus:font-bold transition-all duration-300" routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page">Contatti</a>
+
+      <!-- Menu a Hamburger -->
+      <div class="lg:hidden flex items-center ml-3" (click)="toggleMenu()">
+        <button class="text-gray-600 hover:text-yellow-600 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            <path d="M3 6h18M3 12h18M3 18h18"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+  </div>
+
+  <!-- Menu a discesa per i Servizi -->
+  <div *ngIf="menuOpen" class="lg:hidden absolute top-16 left-0 w-full bg-white border-t border-gray-200 shadow-lg z-20">
+    <div class="flex flex-col p-4">
+      <a class="py-2 text-gray-700 hover:bg-yellow-500 hover:text-white transition-colors duration-300" [routerLink]="['/services']" [fragment]="'free-evaluate'" (click)="closeMenu()">Valutazione Gratuita</a>
+      <a class="py-2 text-gray-700 hover:bg-yellow-500 hover:text-white transition-colors duration-300" [routerLink]="['/services']" [fragment]="'sell-gold-jewels'" (click)="closeMenu()">Vendita oro e gioielli</a>
+      <a class="py-2 text-gray-700 hover:bg-yellow-500 hover:text-white transition-colors duration-300" [routerLink]="['/services']" [fragment]="'jewelry-repair'" (click)="closeMenu()">Riparazione Gioielli</a>
+      <a class="py-2 text-gray-700 hover:bg-yellow-500 hover:text-white transition-colors duration-300" [routerLink]="['/services']" [fragment]="'sell-gold-coin'" (click)="closeMenu()">Valutazione monete d'oro</a>
+      <a class="py-2 text-gray-700 hover:bg-yellow-500 hover:text-white transition-colors duration-300" [routerLink]="['/services']" [fragment]="'evaluates-watch'" (click)="closeMenu()">Valutazione Orologi</a>
+      <a class="py-2 text-gray-700 hover:bg-yellow-500 hover:text-white transition-colors duration-300" [routerLink]="['/services']" [fragment]="'services-for-industry'" (click)="closeMenu()">Servizi per Aziende</a>
+    </div>
   </div>
 </header>
