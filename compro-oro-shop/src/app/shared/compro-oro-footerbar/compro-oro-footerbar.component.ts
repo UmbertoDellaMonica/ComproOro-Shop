@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-compro-oro-footerbar',
+  selector: 'compro-oro-footerbar',
   standalone: true,
   imports: [],
   templateUrl: './compro-oro-footerbar.component.html',
