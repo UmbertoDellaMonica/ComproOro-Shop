@@ -1,9 +1,9 @@
-<!-- First Section -->
-<!--<section class="text-gray-600 body-font bg-white py-10 overflow-hidden">
-     
-</section>
--->
 
+
+
+
+
+<!-- Home Layout -->
 
 <section class=" w-full text-gray-600 body-font overflow-hidden">
   <div class="shadow-xl mb-5"></div> <!--Ombreggiatura sopra -->
@@ -25,8 +25,6 @@
 </section>
 
 
-
-
 <!-- Separator -->
 <app-compro-oro-separator></app-compro-oro-separator>
 
@@ -46,12 +44,14 @@
           <h3 class="text-lg font-medium text-yellow-600 mb-4" style="color: #FBBF24 !important;">{{ service.title }}</h3>
           <p class="leading-relaxed mb-6">{{ service.description }}</p>
           <!-- Bottone per navigare alla pagina del servizio -->
-          <button (click)="navigateToService(service.path)" class="button-primary">
-            Scopri di più
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-            </svg>
-          </button>
+          <div [ngClass]="{
+              'flex justify-center': isMobile, 
+              'text-center': isTablet || isDesktop
+            }">
+            <button (click)="navigateToService(service.path)" class="button-primary">
+              Scopri di più
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -59,18 +59,12 @@
 </section>
 
 
-
-
-
-
-
-
-
-
-
-
 <!-- Separator -->
 <app-compro-oro-separator></app-compro-oro-separator>
 
  <!-- Testimonials -->
 <app-testimonials></app-testimonials>
+
+
+
+
