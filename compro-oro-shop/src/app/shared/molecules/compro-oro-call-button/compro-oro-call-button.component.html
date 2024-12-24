@@ -1,8 +1,8 @@
 <a
-  href="tel:+393661827831"
+  [href]="safePhoneNumber"
   class="inline-flex items-center text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded-full"
-  title="Chiama il numero +393661827831 per effettuare una prenotazione"
-  >
+  title="Chiama il numero {{ phoneNumber }} per effettuare una prenotazione"
+>
   <svg
     class="w-5 h-4 mr-2 "
     fill="none"
@@ -17,5 +17,5 @@
       d="M3 10.5a13.5 13.5 0 0013.5 13.5c2.297 0 4.462-.747 6.207-2.028l2.596-1.745a1.68 1.68 0 000-2.607l-5.113-3.827a1.68 1.68 0 00-2.608.397l-2.616 3.537a.938.938 0 01-1.318.246l-5.27-4.243a.938.938 0 01-.246-1.318l3.536-2.616a1.68 1.68 0 00.397-2.608L9.68 3.792a1.68 1.68 0 00-2.607 0L5.33 6.388A13.5 13.5 0 003 10.5z"
     />
   </svg>
-  +393661827831 <!-- Numero di telefono -->
+  {{ phoneNumber }} <!-- Numero di telefono -->
 </a>

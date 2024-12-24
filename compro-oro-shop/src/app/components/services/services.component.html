@@ -1,4 +1,5 @@
-<section class="elementor-section elementor-top-section elementor-element elementor-element-2773c62 elementor-section-full_width elementor-section-height-default elementor-section-height-default bg-gray-10 py-16" data-id="2773c62" data-element_type="section">
+<!-- Section Navigazione per Desktop -->
+<section *ngIf="isDesktop" class="elementor-section elementor-top-section elementor-element elementor-element-2773c62 elementor-section-full_width elementor-section-height-default elementor-section-height-default bg-gray-10 py-16" data-id="2773c62" data-element_type="section">
   <div class="elementor-container elementor-column-gap-no mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6e6f939" data-id="6e6f939" data-element_type="column">
       <div class="elementor-widget-wrap elementor-element-populated">
@@ -54,26 +55,115 @@
   </div>
 </section>
 
-<!-- Separator -->
-<app-compro-oro-separator></app-compro-oro-separator>
+<!-- Section Navigazione per Tablet -->
+<section *ngIf="isTablet" class="elementor-section elementor-top-section elementor-element elementor-element-2773c62 elementor-section-full_width elementor-section-height-default elementor-section-height-default bg-gray-10 py-16" data-id="2773c62" data-element_type="section">
+  <div class="elementor-container elementor-column-gap-no mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6e6f939" data-id="6e6f939" data-element_type="column">
+      <div class="elementor-widget-wrap elementor-element-populated">
+        <div class="elementor-element elementor-element-6c50f52 elementor-widget elementor-widget-trydo-about-with-experience" data-id="6c50f52" data-element_type="widget" data-widget_type="trydo-about-with-experience.default">
+          <div class="elementor-widget-container">
+            <!-- Start Services Area -->
+            <div class="about-area about-with-experience-area pb-30 pt-30">
+              <div class="about-wrapper">
+                <div class="container mx-auto">
+                  <div class="flex flex-wrap items-center justify-center">
+                    <div class="w-full">
+                      <div class="about-inner inner">
+                        <div class="section-title text-left">
+                          <span class="sub-title text-yellow-500 text-lg uppercase tracking-widest">Cosa facciamo</span>
+                          <h1 class="title text-4xl font-extrabold text-gray-900 mt-2">I nostri servizi</h1>
+                          <p class="mt-4 text-lg leading-relaxed text-gray-700">Il mercato dell'oro usato è un settore in forte espansione e rappresenta un punto di riferimento per la produzione orafa industriale a livello globale.<br>
+                            Presso <strong>ComproOro Castel San Giorgio</strong>, ci occupiamo dell'acquisto di rottami in oro, gioielli e orologi in oro, offrendo un servizio professionale e trasparente. Grazie alla nostra consolidata esperienza e competenza, garantiamo valutazioni accurate e competitive per ogni tipo di oggetto in oro.
+                          </p>
+                        </div>
 
-
-<!-- Section Valutazione Gratuita -->
-<section id="free-evaluate" class="bg-gray-10 py-20">
-  <div class="container mx-auto flex flex-wrap items-center">
-    <div class="w-full md:w-1/2 px-5">
-      <img  decoding="async" src="lingotti-valutazione.jpg" class="section-image rounded-lg shadow-lg mx-auto" alt="Valutazione gratuita">
+                        <div class="experience-wrap mt-10 grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
+                          <div class="experience flex flex-col items-center space-y-4 transition transform hover:scale-105 duration-300">
+                            <img src="gold-icon.svg" alt="Lingotti d'oro" class="w-12 h-12">
+                            <div>
+                              <span class="text-yellow-500 text-xl font-semibold">Lingotti d'oro</span>
+                            </div>
+                          </div>
+                          <div class="experience flex flex-col items-center space-y-4 transition transform hover:scale-105 duration-300">
+                            <img src="sterline-coin.svg" alt="Sterline e monete in oro" class="w-12 h-12">
+                            <div>
+                              <span class="text-yellow-500 text-xl font-semibold">Sterline e monete in oro</span>
+                            </div>
+                          </div>
+                          <div class="experience flex flex-col items-center space-y-4 transition transform hover:scale-105 duration-300">
+                            <img src="orologio-lusso.svg" alt="Luxury Watch" class="w-12 h-12">
+                            <div>
+                              <span class="text-yellow-500 text-xl font-semibold">Luxury Watch</span>
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Services Area -->
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="w-full md:w-1/2 px-5 mt-12 md:mt-0">
-      <div class="bg-white p-8 rounded-lg shadow-lg section-content">
-        <h3 class="text-2xl font-bold text-gray-900 mb-4">Valutazione gratuita</h3>
-        <p class="text-gray-700 mb-4">Presso <strong>Compro Oro (Castel San Giorgio)</strong>, offriamo un servizio di valutazione gratuita delle vostre monete d'oro e sterline d'oro, garantendo un pagamento immediato in contanti, tramite bonifico o assegno bancario. I nostri prezzi sono costantemente aggiornati, assicurando ai nostri clienti le migliori offerte disponibili sul mercato.</p>
-        <p class="text-gray-700 mb-4">La nostra pesatura è completamente trasparente, con un peso garantito e un'attenzione particolare alla riservatezza. Creiamo un ambiente rispettoso della privacy e dei documenti, rendendo <strong>Compro Oro (Castel San Giorgio)</strong> un punto di riferimento riconosciuto in tutta Italia.</p>
-        <p class="text-gray-700 mb-4">In aggiunta, offriamo servizi di ritiro di cartelle di pegno presso il Monte dei Pegni e assistenza per il ritiro di eredità di oggetti preziosi. Forniamo anche consulenze professionali riguardo a divisioni patrimoniali, avvalendoci di una solida esperienza e un approccio altamente professionale.</p>
-        <p class="text-gray-700">Il nostro personale specializzato è disponibile per privati, aziende e professionisti presso la nostra sede di <strong>Castel San Giorgio(SA)</strong> pronto a soddisfare ogni vostra esigenza.</p>
-        <br>
-        <app-compro-oro-button></app-compro-oro-button>
-        <br>
+  </div>
+</section>
+
+<!-- Section Navigazione per Mobile -->
+<section *ngIf="isMobile" class="elementor-section elementor-top-section elementor-element elementor-element-2773c62 elementor-section-full_width elementor-section-height-default elementor-section-height-default bg-gray-10 py-12" data-id="2773c62" data-element_type="section">
+  <div class="elementor-container elementor-column-gap-no mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6e6f939" data-id="6e6f939" data-element_type="column">
+      <div class="elementor-widget-wrap elementor-element-populated">
+        <div class="elementor-element elementor-element-6c50f52 elementor-widget elementor-widget-trydo-about-with-experience" data-id="6c50f52" data-element_type="widget" data-widget_type="trydo-about-with-experience.default">
+          <div class="elementor-widget-container">
+            <!-- Start Services Area -->
+            <div class="about-area about-with-experience-area pb-20 pt-20">
+              <div class="about-wrapper">
+                <div class="container mx-auto">
+                  <div class="flex flex-wrap items-center justify-center">
+                    <div class="w-full">
+                      <div class="about-inner inner">
+                        <div class="section-title text-left">
+                          <span class="sub-title text-yellow-500 text-lg uppercase tracking-widest">Cosa facciamo</span>
+                          <h1 class="title text-3xl font-extrabold text-gray-900 mt-2">I nostri servizi</h1>
+                          <p class="mt-4 text-lg leading-relaxed text-gray-700">Il mercato dell'oro usato è un settore in forte espansione e rappresenta un punto di riferimento per la produzione orafa industriale a livello globale.<br>
+                            Presso <strong>ComproOro Castel San Giorgio</strong>, ci occupiamo dell'acquisto di rottami in oro, gioielli e orologi in oro, offrendo un servizio professionale e trasparente. Grazie alla nostra consolidata esperienza e competenza, garantiamo valutazioni accurate e competitive per ogni tipo di oggetto in oro.
+                          </p>
+                        </div>
+
+                        <div class="experience-wrap mt-8 grid grid-cols-1 sm:grid-cols-2 gap-8 justify-items-center">
+                          <div class="experience flex flex-col items-center space-y-4 transition transform hover:scale-105 duration-300">
+                            <img src="gold-icon.svg" alt="Lingotti d'oro" class="w-10 h-10">
+                            <div>
+                              <span class="text-yellow-500 text-xl font-semibold">Lingotti d'oro</span>
+                            </div>
+                          </div>
+                          <div class="experience flex flex-col items-center space-y-4 transition transform hover:scale-105 duration-300">
+                            <img src="sterline-coin.svg" alt="Sterline e monete in oro" class="w-10 h-10">
+                            <div>
+                              <span class="text-yellow-500 text-xl font-semibold">Sterline e monete in oro</span>
+                            </div>
+                          </div>
+                          <div class="experience flex flex-col items-center space-y-4 transition transform hover:scale-105 duration-300">
+                            <img src="orologio-lusso.svg" alt="Luxury Watch" class="w-10 h-10">
+                            <div>
+                              <span class="text-yellow-500 text-xl font-semibold">Luxury Watch</span>
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Services Area -->
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -83,9 +173,84 @@
 <!-- Separator -->
 <app-compro-oro-separator></app-compro-oro-separator>
 
-<!-- Section - Vendita Gioielli -->
-<section class="bg-gray-10 py-20" id="sell-gold-jewels">
+
+
+
+
+
+<!-- Section Valutazione Gratuita for Mobile -->
+<section *ngIf="isMobile" id="free-evaluate" class="bg-gray-10 py-20">
   <div class="container mx-auto flex flex-wrap items-center">
+    <div class="w-full md:w-1/2 px-5">
+      <img decoding="async" src="lingotti-valutazione.jpg" class="section-image rounded-lg shadow-lg mx-auto hover:shadow-2xl transition-all duration-300" alt="Valutazione gratuita">
+    </div>
+    <div class="w-full md:w-1/2 px-5 mt-12 md:mt-0">
+      <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out section-content">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Valutazione gratuita</h3>
+        <p class="text-gray-700 mb-4 text-sm md:text-base">Presso <strong>Compro Oro (Castel San Giorgio)</strong>, offriamo una valutazione gratuita delle vostre monete d'oro e sterline d'oro, con pagamento immediato in contanti o tramite bonifico. I nostri prezzi sono costantemente aggiornati per garantirvi le migliori offerte.</p>
+        <p class="text-gray-700 mb-4 text-sm md:text-base">La pesatura è trasparente, con un peso garantito e attenzione alla privacy. Siamo un punto di riferimento riconosciuto in Italia.</p>
+        <p class="text-gray-700 mb-4 text-sm md:text-base">Offriamo anche il ritiro di cartelle di pegno presso il Monte dei Pegni e assistenza per il ritiro di eredità di oggetti preziosi.</p>
+        <p class="text-gray-700 text-sm md:text-base">Il nostro personale è disponibile per privati, aziende e professionisti presso la nostra sede di <strong>Castel San Giorgio(SA)</strong>.</p>
+        <br>
+        <app-compro-oro-button></app-compro-oro-button>
+        <br>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Valutazione Gratuita for Tablet -->
+<section *ngIf="isTablet" id="free-evaluate" class="bg-gray-10 py-16 md:py-20">
+  <div class="container mx-auto flex flex-wrap items-center">
+    <div class="w-full md:w-1/2 px-5">
+      <img decoding="async" src="lingotti-valutazione.jpg" class="section-image rounded-lg shadow-lg mx-auto hover:shadow-2xl transition-all duration-300" alt="Valutazione gratuita">
+    </div>
+    <div class="w-full md:w-1/2 px-5 mt-12 md:mt-0">
+      <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out section-content">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Valutazione gratuita</h3>
+        <p class="text-gray-700 mb-4 text-sm md:text-base">Presso <strong>Compro Oro (Castel San Giorgio)</strong>, offriamo una valutazione gratuita delle vostre monete d'oro e sterline d'oro, con pagamento immediato in contanti o tramite bonifico. I nostri prezzi sono costantemente aggiornati per garantirvi le migliori offerte.</p>
+        <p class="text-gray-700 mb-4 text-sm md:text-base">La pesatura è trasparente, con un peso garantito e attenzione alla privacy. Siamo un punto di riferimento riconosciuto in Italia.</p>
+        <p class="text-gray-700 mb-4 text-sm md:text-base">Offriamo anche il ritiro di cartelle di pegno presso il Monte dei Pegni e assistenza per il ritiro di eredità di oggetti preziosi.</p>
+        <p class="text-gray-700 text-sm md:text-base">Il nostro personale è disponibile per privati, aziende e professionisti presso la nostra sede di <strong>Castel San Giorgio(SA)</strong>.</p>
+        <br>
+        <app-compro-oro-button></app-compro-oro-button>
+        <br>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Valutazione Gratuita for Desktop -->
+<section *ngIf="isDesktop" id="free-evaluate" class="bg-gray-10 py-20">
+  <div class="container mx-auto flex flex-wrap items-center">
+    <div class="w-full md:w-1/2 px-5">
+      <img decoding="async" src="lingotti-valutazione.jpg" class="section-image rounded-lg shadow-lg mx-auto hover:shadow-2xl transition-all duration-300" alt="Valutazione gratuita">
+    </div>
+    <div class="w-full md:w-1/2 px-5 mt-12 md:mt-0">
+      <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out section-content">
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Valutazione gratuita</h3>
+        <p class="text-gray-700 mb-4 text-sm md:text-base">Presso <strong>Compro Oro (Castel San Giorgio)</strong>, offriamo una valutazione gratuita delle vostre monete d'oro e sterline d'oro, con pagamento immediato in contanti o tramite bonifico. I nostri prezzi sono costantemente aggiornati per garantirvi le migliori offerte.</p>
+        <p class="text-gray-700 mb-4 text-sm md:text-base">La pesatura è trasparente, con un peso garantito e attenzione alla privacy. Siamo un punto di riferimento riconosciuto in Italia.</p>
+        <p class="text-gray-700 mb-4 text-sm md:text-base">Offriamo anche il ritiro di cartelle di pegno presso il Monte dei Pegni e assistenza per il ritiro di eredità di oggetti preziosi.</p>
+        <p class="text-gray-700 text-sm md:text-base">Il nostro personale è disponibile per privati, aziende e professionisti presso la nostra sede di <strong>Castel San Giorgio(SA)</strong>.</p>
+        <br>
+        <app-compro-oro-button></app-compro-oro-button>
+        <br>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Separator -->
+<app-compro-oro-separator></app-compro-oro-separator>
+
+<!-- Section - Vendita Gioielli -->
+<section *ngIf="isDesktop" class="bg-gray-10 py-20" id="sell-gold-jewels">
+  <div class="container mx-auto flex flex-wrap items-center">
+    
+    <!-- Sezione Testo e Descrizione -->
     <div class="w-full md:w-1/2 px-5">
       <div class="bg-white p-8 rounded-lg shadow-lg section-content">
         <h3 class="text-2xl font-bold text-gray-900 mb-4">Come vendere metalli preziosi</h3>
@@ -93,36 +258,89 @@
         <p class="text-gray-700">Dopo aver concordato l'ammontare monetario, effettuiamo immediatamente il pagamento in contanti, secondo i limiti previsti dalla legge, oppure tramite assegno o bonifico bancario.</p>
       </div>
     </div>
-    <div class="w-full md:w-1/2 px-5">
+    
+    <!-- Sezione Immagine -->
+    <div class="w-full md:w-1/2 px-5 mt-8 md:mt-0">
       <img decoding="async" src="vendita-gioielli.jpg" class="section-image rounded-lg shadow-lg mx-auto" alt="Diamanti">
     </div>
+    
+  </div>
+</section>
+
+<!-- Section Responsiva per Tablet e Mobile -->
+<section *ngIf="isMobile || isTablet" class="bg-gray-10 py-12 md:py-20" id="sell-gold-jewels-responsive">
+  <div class="container mx-auto flex flex-wrap items-center">
+    
+    <!-- Sezione Testo e Descrizione per Mobile e Tablet -->
+    <div class="w-full md:w-1/2 px-5">
+      <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg section-content">
+        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Come vendere metalli preziosi</h3>
+        <p class="text-gray-700 text-sm sm:text-base mb-4">Presso <strong>Compro Oro (Castel San Giorgio)</strong>, offriamo ai nostri clienti la possibilità di vendere metalli preziosi, inclusi oro e argento, e anche diamanti. I nostri esperti eseguono una valutazione accurata dei beni in vendita.</p>
+        <p class="text-gray-700 text-sm sm:text-base">Dopo aver concordato l'ammontare monetario, effettuiamo immediatamente il pagamento in contanti, secondo i limiti previsti dalla legge, oppure tramite assegno o bonifico bancario.</p>
+      </div>
+    </div>
+    
+    <!-- Sezione Immagine per Mobile e Tablet -->
+    <div class="w-full md:w-1/2 px-5 mt-8 md:mt-0">
+      <img decoding="async" src="vendita-gioielli.jpg" class="section-image rounded-lg shadow-lg mx-auto" alt="Diamanti">
+    </div>
+    
   </div>
 </section>
 
 <!-- Separator -->
 <app-compro-oro-separator></app-compro-oro-separator>
-
 <!-- Section - Riparazione Gioielli -->
-<section id="jewelry-repair" class="bg-gray-10 py-20">
+<section *ngIf="isDesktop"  id="jewelry-repair" class="bg-gray-10 py-20">
   <div class="container mx-auto flex flex-wrap items-center">
+    
+    <!-- Sezione Immagine -->
     <div class="w-full md:w-1/2 px-5">
       <img decoding="async" src="riparazione-gioielli.jpg" class="section-image rounded-lg shadow-lg mx-auto" alt="Riparazione Gioielli">
     </div>
+    
+    <!-- Sezione Testo e Descrizione -->
     <div class="w-full md:w-1/2 px-5 mt-10 md:mt-0">
       <div class="bg-white p-8 rounded-lg shadow-lg section-content">
         <h3 class="text-2xl font-bold text-gray-900 mb-4">Servizio di Riparazione Gioielli</h3>
         <p class="text-gray-700 mb-4">Offriamo un servizio professionale di riparazione per tutti i tipi di gioielli, garantendo risultati di alta qualità. Che si tratti di una semplice riparazione o di un restauro complesso, ci occupiamo dei tuoi gioielli con la massima cura e attenzione.</p>
         <p class="text-gray-700 mb-4">Il nostro team esperto utilizza tecniche avanzate e materiali di prima scelta per assicurare che i tuoi gioielli tornino al loro splendore originale. Ogni riparazione è eseguita con precisione e nel rispetto dei più alti standard di qualità.</p>
         <p class="text-gray-700 mb-4">Inoltre, offriamo una valutazione gratuita dei gioielli da riparare, garantendo trasparenza e correttezza nei costi. La soddisfazione del cliente è la nostra priorità.</p>
-        <p class="text-gray-700">Visita la nostra sede a <strong>Castel San Giorgio(SA)</strong> e scopri come possiamo restituire vita ai tuoi gioielli preziosi.</p>
+        <p class="text-gray-700">Visita la nostra sede a <strong>Castel San Giorgio (SA)</strong> e scopri come possiamo restituire vita ai tuoi gioielli preziosi.</p>
         <br>
         <app-compro-oro-button></app-compro-oro-button>
         <br>      
       </div>
     </div>
+    
   </div>
 </section>
 
+<!-- Section Responsiva per Tablet e Mobile -->
+<section *ngIf="isTablet || isMobile" id="jewelry-repair-responsive" class="bg-gray-10 py-12 md:py-20">
+  <div class="container mx-auto flex flex-wrap items-center">
+    
+    <!-- Sezione Testo e Descrizione per Mobile e Tablet -->
+    <div class="w-full md:w-1/2 px-5 order-2 md:order-1">
+      <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg section-content">
+        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Servizio di Riparazione Gioielli</h3>
+        <p class="text-gray-700 text-sm sm:text-base mb-4">Offriamo un servizio professionale di riparazione per tutti i tipi di gioielli, garantendo risultati di alta qualità. Che si tratti di una semplice riparazione o di un restauro complesso, ci occupiamo dei tuoi gioielli con la massima cura e attenzione.</p>
+        <p class="text-gray-700 text-sm sm:text-base mb-4">Il nostro team esperto utilizza tecniche avanzate e materiali di prima scelta per assicurare che i tuoi gioielli tornino al loro splendore originale. Ogni riparazione è eseguita con precisione e nel rispetto dei più alti standard di qualità.</p>
+        <p class="text-gray-700 text-sm sm:text-base mb-4">Inoltre, offriamo una valutazione gratuita dei gioielli da riparare, garantendo trasparenza e correttezza nei costi. La soddisfazione del cliente è la nostra priorità.</p>
+        <p class="text-gray-700 text-sm sm:text-base">Visita la nostra sede a <strong>Castel San Giorgio (SA)</strong> e scopri come possiamo restituire vita ai tuoi gioielli preziosi.</p>
+        <br>
+        <app-compro-oro-button></app-compro-oro-button>
+        <br>      
+      </div>
+    </div>
+    
+    <!-- Sezione Immagine per Mobile e Tablet -->
+    <div class="w-full md:w-1/2 px-5 mt-8 md:mt-0 order-1 md:order-2">
+      <img decoding="async" src="riparazione-gioielli.jpg" class="section-image rounded-lg shadow-lg mx-auto" alt="Riparazione Gioielli">
+    </div>
+    
+  </div>
+</section>
 
 <!-- Separator -->
 <app-compro-oro-separator></app-compro-oro-separator>
@@ -132,8 +350,11 @@
 
 <!-- Section - Valutazione Monete D'oro e Sterline D'oro -->
 
-<section class="bg-gray-10 py-20" id="sell-gold-coin">
+<!-- Section - Valutazione monete d'oro -->
+<section *ngIf="isDesktop" class="bg-gray-10 py-20" id="sell-gold-coin">
   <div class="container mx-auto flex flex-wrap items-center">
+    
+    <!-- Sezione Testo e Descrizione per Desktop -->
     <div class="w-full md:w-1/2 px-5">
       <div class="bg-white p-8 rounded-lg shadow-lg">
         <h3 class="text-2xl font-bold text-gray-900 mb-4">Valutazione monete d'oro</h3>
@@ -141,11 +362,35 @@
         <p class="text-gray-700">Dopo un'attenta valutazione dei beni in vendita e la concordanza sull'importo monetario, procediamo immediatamente al pagamento. Questo può avvenire in contanti, nel rispetto dei limiti previsti dalla legge, oppure tramite assegno o bonifico bancario.</p>
       </div>
     </div>
+    
+    <!-- Sezione Immagine per Desktop -->
     <div class="w-full md:w-1/2 px-5">
       <img decoding="async" width="500" height="563" src="/services-page/gold-sterlina.png" class="w-50 h-50 rounded-lg shadow-lg mx-auto" alt="Monete d'oro">
     </div>
   </div>
 </section>
+
+<!-- Section Responsiva per Tablet e Mobile -->
+<section *ngIf="isMobile || isTablet" class="bg-gray-10 py-12 md:py-20" id="sell-gold-coin-responsive">
+  <div class="container mx-auto flex flex-wrap items-center">
+    
+    <!-- Sezione Immagine per Mobile e Tablet -->
+    <div class="w-full md:w-1/2 px-5 mt-8 md:mt-0 order-1 md:order-2">
+      <img decoding="async" width="500" height="563" src="/services-page/gold-sterlina.png" class="w-50 h-50 rounded-lg shadow-lg mx-auto" alt="Monete d'oro">
+    </div>
+    
+    <!-- Sezione Testo e Descrizione per Mobile e Tablet -->
+    <div class="w-full md:w-1/2 px-5 order-2 md:order-1">
+      <div class="bg-white p-6 sm:p-8 rounded-lg shadow-lg">
+        <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-4">Valutazione monete d'oro</h3>
+        <p class="text-gray-700 text-sm sm:text-base mb-4"><strong>ComproOro (Castel San Giorgio)</strong> offre ai propri clienti l'opportunità di vendere monete d'oro e sterline d'oro.</p>
+        <p class="text-gray-700 text-sm sm:text-base">Dopo un'attenta valutazione dei beni in vendita e la concordanza sull'importo monetario, procediamo immediatamente al pagamento. Questo può avvenire in contanti, nel rispetto dei limiti previsti dalla legge, oppure tramite assegno o bonifico bancario.</p>
+      </div>
+    </div>
+    
+  </div>
+</section>
+
 
 
 
@@ -270,16 +515,6 @@
             <div class="service">
               <div class="icon mb-3">
                 <img src="/loghi-orologi/Hublot-logo.svg" alt="Hublot Logo" title="Hublot" class="h-20 mx-auto" />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="service-item mt-5 md:mt-0 w-full md:w-1/3 lg:w-1/4 px-4 mb-6">
-          <div class="single-service service__style--2 bg-white rounded-lg shadow-lg p-5 transition-transform duration-300 hover:scale-105">
-            <div class="service">
-              <div class="icon mb-3">
-                <img src="/loghi-orologi/Tissot-Logo.svg" alt="Tissot Logo" title="Tissot Logo" class="h-20 mx-auto" />
               </div>
             </div>
           </div>
