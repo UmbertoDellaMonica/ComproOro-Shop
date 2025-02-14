@@ -8,7 +8,7 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
   styleUrls: ['./compro-oro-email.component.scss']
 })
 export class ComproOroEmailComponent {
-  email: string = 'cristina.apesodoro@gmail.com'; // Email del cliente
+  email: string = 'example@gmail.com'; // Email del cliente
   safeEmail: SafeUrl; // Variabile per memorizzare la URL sicura
 
   constructor(private sanitizer: DomSanitizer) {

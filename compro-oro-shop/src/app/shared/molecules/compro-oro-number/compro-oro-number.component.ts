@@ -13,7 +13,7 @@ export class ComproOroNumberComponent {
 
 
 
-    phoneNumber: string = '+393661827831';
+    phoneNumber: string = '+3333333333';
     safePhoneNumber: SafeUrl;
   
     constructor(private sanitizer: DomSanitizer) {
