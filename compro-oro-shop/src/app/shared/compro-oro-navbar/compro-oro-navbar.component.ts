@@ -49,6 +49,7 @@ export class ComproOroNavbarComponent implements OnInit {
       this.isDesktop = false;
     
     } else if (width > 500 && width <= 1000) {
+    
       this.isMobile = false;
       this.isTablet = true;
       this.isDesktop = false;
