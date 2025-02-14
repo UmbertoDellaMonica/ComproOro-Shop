@@ -8,7 +8,7 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
   styleUrls: ['./compro-oro-call-button.component.scss']
 })
 export class ComproOroCallButtonComponent {
-  phoneNumber: string = '+393661827831';  // Numero di telefono
+  phoneNumber: string = '+393333333';  // Numero di telefono
   safePhoneNumber: SafeUrl;  // Variabile per il numero sanitizzato
 
   constructor(private sanitizer: DomSanitizer) {

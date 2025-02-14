@@ -93,7 +93,7 @@ export class ComproOroMapComponent {
   
     // Generazione del link mailto
     get mailtoLink(): string {
-      const recipient = 'cristina.apesodoro@gmail.com'; // L'indirizzo del destinatario
+      const recipient = 'example@gmail.com'; // L'indirizzo del destinatario
       const subject = 'Feedback dal sito ComproOro';
       const body = `${this.feedback.message}`;
       return `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;

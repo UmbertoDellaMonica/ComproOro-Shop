@@ -1,11 +1,15 @@
 import { CommonModule } from '@angular/common';
 import { OnInit,HostListener } from '@angular/core';
 import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
     selector: 'compro-oro-footerbar',
     standalone:true,
-    imports: [CommonModule],
+    imports: [
+    CommonModule,
+    RouterLink
+],
     templateUrl: './compro-oro-footerbar.component.html',
     styleUrl: './compro-oro-footerbar.component.scss'
 })
