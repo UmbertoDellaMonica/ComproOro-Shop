@@ -9,7 +9,13 @@ import { DeviceDetectorService } from 'ngx-device-detector';
 @Component({
     selector: 'app-root',
     standalone:true,
-    imports:[ComproOroFooterbarComponent,ComproOroNavbarComponent,RouterOutlet,RouterLinkActive,RouterLink],
+    imports:[
+      ComproOroFooterbarComponent,
+      ComproOroNavbarComponent,
+      RouterOutlet,
+      RouterLinkActive,
+      RouterLink
+    ],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss'
 })

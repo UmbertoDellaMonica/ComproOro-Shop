@@ -33,7 +33,7 @@
 <header *ngIf="isMobile" class="text-gray-600 body-font shadow-md">
   <div class="container mx-auto flex flex-wrap p-5 items-center justify-between relative">
     <!-- Logo e Titolo -->
-    <a class="flex title-font font-medium items-center text-gray-900" href="/home">
+    <a class="flex title-font font-medium items-center text-gray-900" [routerLink]="['/home']" routerLinkActive='active'>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-8 h-8 text-white p-2 bg-yellow-500 rounded-full shadow-lg transition-shadow duration-300 hover:shadow-xl" viewBox="0 0 24 24">
         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
       </svg>
@@ -112,7 +112,7 @@
 <header *ngIf="isTablet" class="text-gray-600 body-font shadow-md">
   <div class="container mx-auto flex flex-wrap p-5 items-center justify-between relative">
     <!-- Logo -->
-    <a class="flex title-font font-medium items-center text-gray-900" href="/home">
+    <a class="flex title-font font-medium items-center text-gray-900" [routerLink]="['/home']" routerLinkActive='active'>
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-8 h-8 text-white p-2 bg-yellow-500 rounded-full shadow-lg transition-shadow duration-300 hover:shadow-xl" viewBox="0 0 24 24">
         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
       </svg>
