@@ -1,0 +1,53 @@
+.not-found-container {
+  position: relative;
+  height: 100vh; /* Copre tutta la finestra */
+  background-image: url('../../../../public/lingotti-valutazione.jpg'); /* Inserisci il percorso dell'immagine */
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Assicurati che l'immagine sia dietro il contenuto */
+}
+
+.not-found-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit;
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px); /* Aggiungi l'effetto di sfocatura solo sull'immagine */
+  z-index: -1; /* Assicurati che l'immagine sfocata sia dietro il contenuto */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Sovrapposizione semi-trasparente per migliorare la leggibilità */
+  z-index: 0;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff; /* Colore del testo bianco per contrastare con il background scuro */
+  z-index: 1; /* Contenuto sopra l'overlay e l'immagine */
+}
+
+.error-icon {
+  font-size: 4rem; /* Modifica la dimensione dell'icona */
+  margin-bottom: 20px;
+}
+
+.error-message {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-top: 10px;
+}

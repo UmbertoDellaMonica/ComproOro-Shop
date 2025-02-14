@@ -1,0 +1,86 @@
+.product-item-content { 
+  border: 1px solid var(--surface-d); 
+  border-radius: 3px; 
+  margin: 0.3rem; 
+  text-align: center; 
+  padding: 2rem 0; 
+  background-color: snow; 
+} 
+
+.product-image { 
+  width: 50%; 
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16),  
+    0 3px 6px rgba(0, 0, 0, 0.23); 
+} 
+
+h3 { 
+  color: red; 
+  text-align: center; 
+}
+
+
+
+.services-section {
+position: relative;
+min-height: 100vh; /* Copre almeno l'altezza della finestra */
+background-image: url('../../../../public/lingotti-blurred.jpg'); /* Inserisci il percorso dell'immagine */
+background-size: cover;
+background-position: center;
+}
+
+.services-section::before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-image: inherit;
+background-size: cover;
+background-position: center;
+filter: blur(8px); /* Aggiungi l'effetto di sfocatura solo sull'immagine */
+z-index: -2; /* Assicurati che l'immagine sfocata sia dietro il contenuto */
+}
+
+.overlay {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: rgba(0, 0, 0, 0.5); /* Sovrapposizione semi-trasparente per migliorare la leggibilità */
+z-index: -1; /* Assicurati che l'overlay sia dietro il contenuto */
+}
+
+.content {
+position: relative;
+z-index: 1; /* Contenuto sopra l'overlay e l'immagine */
+}
+
+.bg-white {
+background-color: white;
+}
+
+.text-white {
+color: #fff;
+}
+
+.button-primary {
+background-color: #FBBF24; /* Indigo */
+color: white;
+padding: 10px 20px;
+border-radius: 5px;
+display: inline-flex;
+align-items: center;
+cursor: pointer;
+border: none;
+transition: background-color 0.3s;
+}
+
+.button-primary:hover {
+background-color: #f9cc07; /* Darker indigo */
+}
+
+.button-primary svg {
+margin-left: 8px;
+}

@@ -1,0 +1,64 @@
+.testimonials-section {
+    background-image: url('../../../../../../public/services-page/gold-sterlina-blurred.png'); /* Inserisci il percorso corretto dell'immagine */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #fff; /* Colore del testo per migliorare la leggibilità */
+  }
+  
+  .testimonials-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Sovrapposizione semi-trasparente per migliorare la leggibilità */
+    z-index: -1; /* Assicurati che l'overlay sia dietro il contenuto */
+  }
+  
+  .testimonials-section h2 {
+    font-size: 2rem; /* Ingrandire la scritta Testimonials */
+    font-weight: bold;
+    color: #0d0900; /* Cambia il colore se necessario */
+    margin-bottom: 2rem; /* Aggiungere spazio tra la scritta e il carosello */
+  }
+  
+  .testimonials-section .product-item-content {
+    width: 100%;
+    max-width: 320px; /* Larghezza massima per il contenuto del testimonial */
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 0 6px 20px rgba(0, 0, 0, 0.3); /* Ombreggiatura più forte */
+  }
+  
+  .testimonials-section .product-item-content p {
+    color: #4a5568; /* Colore del testo per migliorare la leggibilità */
+  }
+  
+  .testimonials-section .product-item-content svg {
+    fill: #FBBF24; /* Colore delle stelle */
+  }
+  
+  .testimonials-section .w-16 {
+    background-color: #FFD700; /* Colore di sfondo giallo oro */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Ombreggiatura per l'icona */
+  }
+  
+  .testimonials-section .product-item-content .text-gray-900 {
+    color: #000000; /* Colore del testo per migliorare la leggibilità */
+  }
+  
+  .testimonials-section .product-item-content .text-gray-700 {
+    color: #4a5568; /* Colore del testo per migliorare la leggibilità */
+  }
+  
+  .testimonials-section .flex.mb-4 {
+    color: #4a5568; /* Colore del testo del rating */
+  }
+  
+  @media (min-width: 768px) {
+    .testimonials-section .product-item-content {
+      padding: 2rem;
+    }
+  }
+  

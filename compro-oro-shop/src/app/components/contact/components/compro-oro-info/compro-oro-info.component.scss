@@ -1,0 +1,8 @@
+.fixed-size {
+    width: 100%;
+    min-height: 350px; /* Altezza minima per i contenitori */
+    max-height: 350px; /* Altezza massima per i contenitori */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
